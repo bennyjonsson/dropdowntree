@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="app.js"></script>
+    <script src="directives/bigDropdownTree.js"></script>
+ 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
+ <link rel="stylesheet" href="directives/bigDropdownTree.css">
+  </head>
+  <body>
+    
+    <div>
+        <div ng-controller="Controller">
+            <h1>{{bacon}}</h1>
+          <big-dropdown ng-model="numberTree"></big-dropdown>
+     </div>
+    </div>
+  </body>
+</html>
