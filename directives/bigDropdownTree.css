@@ -7,24 +7,51 @@
   user-select: none;
 }
 .child {
-  position: relative;
-    left: 20px;}
-.hasChildren {text-decoration: underline;}
-a:link {
-    text-decoration: none;
-color:black;
+
+    }
+
+.bigTreeNodeNode:hover {
+    background-color: hotpink;
+}
+.bigTreeNodeNode {
 }
 
-a:visited {
-    text-decoration: none;
-  color:black;
+.bigDropDownTree {
+    max-width: 200px;
+    max-height: 100px;
+     background-color: lightgray;
+  white-space: nowrap;
 }
 
-a:hover {
-    text-decoration: none;
+/* darkgrey color not received */
+.fancy-scrollbar {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+.fancy-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.fancy-scrollbar::-webkit-scrollbar-corner {
+  border: none;
+  width: 0;
+  height: 0;
+}
+.fancy-scrollbar::-webkit-scrollbar-button {
+  border: none;
+  width: 0;
+  height: 0;
+}
+.fancy-scrollbar::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: #bbbbbb;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.fancy-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a2a2a2;
+}
+.fancy-scrollbar::-webkit-scrollbar-track {
+  border: none;
+  background-color: transparent;
 
-a:active {
-    text-decoration: none;
-}
 

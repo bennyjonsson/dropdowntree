@@ -1,25 +1,20 @@
  <h1>Directice BACON</h1>
  <script type="text/ng-template" id="treeNode">
-    <div ng-show="!node.nodes" ng-bind="node.value" ng-attr-title="{{node.key}}"></div>
+    <div class="bigTreeNodeNode" ng-show="!node.nodes" 
+    ng-bind="node.value" ng-attr-title="{{node.value}}"
+    ng-click="bigDropdownTree({key:'Funkar'})"></div>
     <div ng-if="node.nodes">
-           <i ng-click="showNodes[node.key] = !showNodes[node.key]" class="fa fa-sort-down" ng-class="{'fa-rotate-270':!show}"></i><span ng-bind="node.value" ng-attr-title="{{node.key}}"></span>
+           <span ng-click="showNodes[node.key] = !showNodes[node.key]">
+               <i class="fa fa-sort-down" ng-class="{'fa-rotate-270':!showNodes[node.key]}"></i>
+               <span ng-bind="node.value"  ng-attr-title="{{node.value}}"></span>
+           </span>
            <div ng-if="showNodes[node.key]">
-           <div  ng-repeat="node in node.nodes" ng-include="'treeNode'" class="child">
-           </div>
+           <div ng-repeat="node in node.nodes" ng-include="'treeNode'" >
            </div>
     </div>
+    </div>
  </script>
-  <div  class="box fancy-scrollbar noselect">
+  <div class="bigDropDownTree fancy-scrollbar noselect">
     <div ng-repeat="node in tree" ng-include="'treeNode'">
- 
-      <!-- Arrow expand collaps submenu -->
-      <!--<a href="#" ng-click="show = !show" ng-show="node.nodes.length" ng-attr-title="{{node.value}}">
-        <i ng-show="node.nodes.length" class="fa fa-sort-down" ng-class="{'fa-rotate-270':!show}"></i>
-      </a> 
-      <a href="#" ng-bind="node.value" ng-attr-title="{{node.value}}" ng-click="nodeclicked(node.key)" class="node"></a>
-      <div ng-show="show" ng-repeat="child in node.nodes">
-        <a href="#" ng-attr-title="{{child.value}}" ng-bind="child.value" class="child" ng-click="nodeclicked(node.key)"></a>
-      </div>
- -->
     </div>
   </div>

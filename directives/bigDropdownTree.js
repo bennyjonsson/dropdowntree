@@ -1,15 +1,22 @@
 (function(angular) {
     'use strict';
     angular
-        .module('bigDropdown', [])
-        .directive('bigDropdown', function() {
+        .module('bigDropdownTree', [])
+        .directive('bigDropdownTree', function() {
             return {
-                restrict: 'E',
-                scope: {tree:'=ngModel'},
+                // restrict: 'E',
+                scope: {
+                    tree:'=ngModel',
+                    bigDropdownTree: '&'
+                },
                 templateUrl: 'directives/bigDropdownTree.tpl.html',
                 require: 'ngModel',
                 link: function(scope, element, attrs, ctrl) {
-                   
+                   scope.bigDropdownTree(
+                       {
+                           key:'Tralla'
+                       }
+                   );
                 }
             };
         });
