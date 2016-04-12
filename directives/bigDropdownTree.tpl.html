@@ -1,6 +1,6 @@
 <script type="text/ng-template" id="treeNode">
     <div class="bigTreeNode" ng-show="!node.nodes">
-        <div tabindex="0" class="{{node.class}}" ng-attr-title="{{node.value}}" ng-click="nodeClicked(node)">&nbsp;{{node.value}}</div>
+        <div tabindex="0" class="bigNode {{node.class}}" ng-attr-title="{{node.value}}" ng-keydown="$event.keyCode == 13 && nodeClicked(node)" ng-click="nodeClicked(node)">&nbsp;{{node.value}}</div>
     </div>
     <div ng-if="node.nodes">
         <div tabindex="0" ng-click="toggleNodes(node.key)" ng-keydown="$event.keyCode == 13 && toggleNodes(node.key)" class="bigTreeNavigateNode">

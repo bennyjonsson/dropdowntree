@@ -22,6 +22,9 @@ padding-left: 10px;
     color: lightgray;
     cursor: default;
 }
+.bigNode:focus,.bigTreeNavigateNode:focus {
+    font-weight: bolder;
+}
 
 
 .bigDropDownTree {
