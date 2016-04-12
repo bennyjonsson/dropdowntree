@@ -22,6 +22,8 @@
           <div big-dropdown-tree ng-model="userTree" issueid="12" on-node-click="setUser"></div>
           <big-dropdown-tree ng-model="sentiment" issueid="12" openlabel="Negative" on-node-click="setUser"></big-dropdown-tree>
           
+            <big-dropdown-tree ng-model="testModel" issueid="{{sentiment}}" openlabel="ny test" on-node-click="setUser"></big-dropdown-tree>
+          
      </div>
     </div>
   </body>

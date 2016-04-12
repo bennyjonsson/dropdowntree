@@ -25,7 +25,7 @@ angular.module('appDropDown',['bigDropdownTree'])
     }]; 
                         
 $scope.baconTree =
-    [{key: "1",value: "Bacon 1",age:1}, 
+    [{key: "1",value: "Taxidermy locavore sartorial, you probably haven't heard of them vegan XOXO chillwave tattooed master cleanse drinking vinegar.",age:1}, 
     {key: "2",value: "Bacon 2",age:12,
         nodes: [{key: "20",value: "Bacon 20",age:42},
                 {key:"21",value:"bacon 21",age:99,
@@ -41,4 +41,5 @@ $scope.sentiment =
         {key:'2',value:'Neutral' ,class:'fa fa-check-square'},
         {key:'3',value:'Negative',class:'fa fa-minus-square' },
     ];
+    $scope.testModel = [{key:'1',value:"ett"}];
 }]);

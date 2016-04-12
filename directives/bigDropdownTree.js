@@ -12,6 +12,7 @@
                 templateUrl: 'directives/bigDropdownTree.tpl.html',
                 require: 'ngModel',
                 link: function(scope, element, attrs, ctrl) {
+                    scope.tree = scope.ngModel;
                     scope.id = attrs["issueid"];
                     scope.openLabel = attrs["openlabel"] || "Click to open";
                     scope.showDropdown = false;

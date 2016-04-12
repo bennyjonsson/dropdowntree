@@ -16,7 +16,7 @@
 <div ng-mouseleave="closeDropdown()">
     <span tabindex="0" ng-click="toggleDropdown()" ng-keydown="$event.keyCode == 13 && toggleDropdown()" ng-bind="openLabel"></span>
     <div ng-if="showDropdown" class="bigDropDownTree fancy-scrollbar noselect">
-        <div ng-repeat="node in ngModel" ng-include="'treeNode'">
+        <div ng-repeat="node in tree" ng-include="'treeNode'">
         </div>
     </div>
 </div>
