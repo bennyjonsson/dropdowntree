@@ -7,19 +7,30 @@
   user-select: none;
 }
 .child {
-
+padding-left: 10px;
     }
+.bigTreeNode {
+   padding-left: 2px;
+}
+.bigTreeNode:hover {
+    background-color: #0094CD;
+    color: #fff;
+    cursor: pointer;
+}
+.bigTreeNavigateNode:hover {
+    background-color: #0094CD;
+    color: lightgray;
+    cursor: default;
+}
 
-.bigTreeNodeNode:hover {
-    background-color: hotpink;
-}
-.bigTreeNodeNode {
-}
 
 .bigDropDownTree {
+    border-style: solid;
+    position: absolute;
     max-width: 200px;
+    min-width: 100px;
     max-height: 100px;
-     background-color: lightgray;
+     background-color: white;
   white-space: nowrap;
 }
 
@@ -53,5 +64,5 @@
 .fancy-scrollbar::-webkit-scrollbar-track {
   border: none;
   background-color: transparent;
-
+}
 

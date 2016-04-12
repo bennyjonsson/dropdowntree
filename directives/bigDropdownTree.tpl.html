@@ -1,20 +1,22 @@
- <h1>Directice BACON</h1>
- <script type="text/ng-template" id="treeNode">
-    <div class="bigTreeNodeNode" ng-show="!node.nodes" 
-    ng-bind="node.value" ng-attr-title="{{node.value}}"
-    ng-click="bigDropdownTree({key:'Funkar'})"></div>
+<script type="text/ng-template" id="treeNode">
+    <div class="bigTreeNode" ng-show="!node.nodes">
+        <div tabindex="0" class="{{node.class}}" ng-attr-title="{{node.value}}" ng-click="nodeClicked(node)">&nbsp;{{node.value}}</div>
+    </div>
     <div ng-if="node.nodes">
-           <span ng-click="showNodes[node.key] = !showNodes[node.key]">
-               <i class="fa fa-sort-down" ng-class="{'fa-rotate-270':!showNodes[node.key]}"></i>
-               <span ng-bind="node.value"  ng-attr-title="{{node.value}}"></span>
-           </span>
-           <div ng-if="showNodes[node.key]">
-           <div ng-repeat="node in node.nodes" ng-include="'treeNode'" >
-           </div>
+        <div tabindex="0" ng-click="toggleNodes(node.key)" ng-keydown="$event.keyCode == 13 && toggleNodes(node.key)" class="bigTreeNavigateNode">
+            <i class="fa fa-sort-down" ng-class="{'fa-rotate-270':!showNodes[node.key]}"></i>
+            <span {{node.class}} ng-bind="node.value" ng-attr-title="{{node.value}}"></span>
+        </div>
+        <div ng-if="showNodes[node.key]">
+            <div ng-repeat="node in node.nodes" ng-include="'treeNode'">
+            </div>
+        </div>
     </div>
+</script>
+<div ng-mouseleave="closeDropdown()">
+    <span tabindex="0" ng-click="toggleDropdown()" ng-keydown="$event.keyCode == 13 && toggleDropdown()" ng-bind="openLabel"></span>
+    <div ng-if="showDropdown" class="bigDropDownTree fancy-scrollbar noselect">
+        <div ng-repeat="node in ngModel" ng-include="'treeNode'">
+        </div>
     </div>
- </script>
-  <div class="bigDropDownTree fancy-scrollbar noselect">
-    <div ng-repeat="node in tree" ng-include="'treeNode'">
-    </div>
-  </div>
+</div>

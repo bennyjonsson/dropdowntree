@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="app">
+<html ng-app="appDropDown">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script src="app.js"></script>
@@ -7,15 +7,21 @@
  
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
  <link rel="stylesheet" href="directives/bigDropdownTree.css">
+ 
   </head>
   <body>
     
     <div>
         <div ng-controller="Controller">
-            <h1>{{bacon}}</h1>
-          <div big-dropdown-tree ng-model="numberTree"></div>
+          <div big-dropdown-tree ng-model="userTree" issueid="12" openlabel="Tralla" on-node-click="setUser"></div>
+          <div big-dropdown-tree ng-model="baconTree" issueid="42" on-node-click="iLikeBacon"></div>
+          <div big-dropdown-tree ng-model="userTree" issueid="12" on-node-click="setUser"></div>
+          <div big-dropdown-tree ng-model="userTree" issueid="12" on-node-click="setUser"></div>
+          <div big-dropdown-tree ng-model="userTree" issueid="12"  openlabel="Banana rama" on-node-click="setUser"></div>
+          <big-dropdown-tree ng-model="userTree" issueid="12" openlabel="I love BACON" on-node-click="setUser"></big-dropdown-tree>
+          <div big-dropdown-tree ng-model="userTree" issueid="12" on-node-click="setUser"></div>
+          <big-dropdown-tree ng-model="sentiment" issueid="12" openlabel="Negative" on-node-click="setUser"></big-dropdown-tree>
           
-          <div big-dropdown-tree ng-model="baconTree"></div>
      </div>
     </div>
   </body>
